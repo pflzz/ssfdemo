@@ -1,0 +1,15 @@
+# 项目排除路径
+/ssfmall-auth-server/target/
+/ssfmall-cart/target/
+/ssfmall-common/target/
+/ssfmall-coupon/target/
+/ssfmall-gateway/target/
+/ssfmall-member/target/
+/ssfmall-order/target/
+/ssfmall-product/target/
+/ssfmall-search/target/
+/ssfmall-secskill/target/
+/ssfmall-third-party/target/
+/ssfmall-ware/target/
+/test-sso-client/target/
+/test-sso-server/target/

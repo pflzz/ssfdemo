@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="test-sso-client" />
+        <module name="ssfmall-cart" />
+        <module name="ssfmall-gateway" />
+        <module name="ssfmall-coupon" />
+        <module name="ssfmall-order" />
+        <module name="renren-generator" />
+        <module name="test-sso-server" />
+        <module name="ssf-member" />
+        <module name="ssfmall-ware" />
+        <module name="ssfmall-common" />
+        <module name="ssfmall-search" />
+        <module name="ssfmall-product" />
+        <module name="ssfmall-secskill" />
+        <module name="ssfmall-auth-server" />
+        <module name="renren-fast" />
+        <module name="ssfmall-third-party" />
+        <module name="ssfmall-member" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="test-sso-client2" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="renren-fast" options="-parameters" />
+      <module name="renren-generator" options="-parameters" />
+      <module name="ssf-member" options="-parameters" />
+      <module name="ssfmall-auth-server" options="-parameters" />
+      <module name="ssfmall-cart" options="-parameters" />
+      <module name="ssfmall-common" options="-parameters" />
+      <module name="ssfmall-coupon" options="-parameters" />
+      <module name="ssfmall-gateway" options="-parameters" />
+      <module name="ssfmall-member" options="-parameters" />
+      <module name="ssfmall-order" options="-parameters" />
+      <module name="ssfmall-product" options="-parameters" />
+      <module name="ssfmall-search" options="-parameters" />
+      <module name="ssfmall-secskill" options="-parameters" />
+      <module name="ssfmall-third-party" options="-parameters" />
+      <module name="ssfmall-ware" options="-parameters" />
+      <module name="test-sso-client" options="-parameters" />
+      <module name="test-sso-client2" options="-parameters" />
+      <module name="test-sso-server" options="-parameters" />
+    </option>
+  </component>
+</project>

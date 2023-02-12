@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/renren-fast/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/renren-generator/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ssfmall-auth-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ssfmall-cart/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ssfmall-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ssfmall-coupon/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ssfmall-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ssfmall-member/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ssfmall-order/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ssfmall-product/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ssfmall-search/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ssfmall-secskill/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ssfmall-third-party/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ssfmall-ware/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test-sso-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test-sso-client2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test-sso-client2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test-sso-server/src/main/java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

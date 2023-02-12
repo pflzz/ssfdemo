@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.8.RELEASE</version>
+    </parent>
+    <groupId>com.pfl.ssfmall</groupId>
+    <artifactId>ssfmall</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>ssfmall</name>
+    <description>聚合服务</description>
+    <packaging>pom</packaging>
+
+    <properties>
+        <elasticsearch.version>7.4.2</elasticsearch.version>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+
+    <modules>
+        <module>ssfmall-coupon</module>
+        <module>ssfmall-order</module>
+        <module>ssfmall-product</module>
+        <module>ssfmall-ware</module>
+        <module>renren-fast</module>
+        <module>renren-generator</module>
+        <module>ssfmall-common</module>
+        <module>ssfmall-member</module>
+        <module>ssfmall-gateway</module>
+        <module>ssfmall-gateway</module>
+        <module>ssfmall-third-party</module>
+        <module>ssfmall-search</module>
+        <module>ssfmall-auth-server</module>
+        <module>test-sso-server</module>
+        <module>test-sso-client</module>
+        <module>ssfmall-cart</module>
+        <module>ssfmall-secskill</module>
+    </modules>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2.1.0.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Greenwich.SR3</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+
+    </dependencyManagement>
+</project>

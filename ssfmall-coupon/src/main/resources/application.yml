@@ -1,0 +1,26 @@
+spring:
+  datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://43.138.81.213:3306/gulimall_sms?useSSL=false
+      username: root
+      password: 123456
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  application:
+    name: ssfmall-coupon
+
+
+
+
+mybatis-plus:
+    mapper-locations: classpath*:/mapper/**/*.xml
+    global-config:
+      db-config:
+        id-type: auto
+server:
+  port: 8000
+
+spring.datasource.druid.test-on-borrow: true
+spring.datasource.druid.test-while-idle: true
