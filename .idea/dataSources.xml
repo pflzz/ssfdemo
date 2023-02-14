@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="@43.138.81.213" uuid="9398e272-b1c1-4824-9cd9-b0d3c536bf2e">
+    <data-source source="LOCAL" name="@43.138.81.213" uuid="a2b7821b-8ecf-4bc5-8dd7-9d952339e1d5">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://43.138.81.213:3306</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="gulimall_pms@43.138.81.213" uuid="87ebd463-7bcc-4bdc-a176-d17692a0845f">
+    <data-source source="LOCAL" name="gulimall_ums@43.138.81.213" uuid="baeffee0-40c5-40f9-a701-e9420a9d4e00">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://43.138.81.213:3306/gulimall_pms</jdbc-url>
+      <jdbc-url>jdbc:mysql://43.138.81.213:3306/gulimall_ums</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="gulimall_wms@43.138.81.213" uuid="11fbef7d-1f76-4830-89da-d2672fc1680b">
+    <data-source source="LOCAL" name="gulimall_wms@43.138.81.213" uuid="d76f9b3d-56d4-4600-b67c-e73df8db7e00">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>

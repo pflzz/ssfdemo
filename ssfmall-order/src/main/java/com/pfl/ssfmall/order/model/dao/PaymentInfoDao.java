@@ -1,17 +1,17 @@
-package com.pfl.ssfmall.order.dao;
+package com.pfl.ssfmall.order.model.dao;
 
-import com.pfl.ssfmall.order.entity.OrderSettingEntity;
+import com.pfl.ssfmall.order.entity.PaymentInfoEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
- * 订单配置信息
+ * 支付信息表
  * 
  * @author ssf
  * @email ${email}
  * @date 2022-06-02 11:11:58
  */
 @Mapper
-public interface OrderSettingDao extends BaseMapper<OrderSettingEntity> {
+public interface PaymentInfoDao extends BaseMapper<PaymentInfoEntity> {
 	
 }

@@ -145,13 +145,12 @@ public class CartServiceImpl implements CartService {
         } else {
             String cartKey = CartConstant.USER_CART_PREFIX + userInfoTo.getUserId();
             List<CartItem> cartItems = getCartItems(cartKey);
-            List<CartItem> collect = cartItems.stream().filter(item -> item.getCheck()).map(item -> {
+            return cartItems.stream().filter(item -> item.getCheck()).map(item -> {
                 // 获取商品最新价格
                 BigDecimal price = productFeignService.getPrice(item.getSkuId());
                 item.setPrice(price);
                 return item;
             }).collect(Collectors.toList());
-            return collect;
         }
     }
 

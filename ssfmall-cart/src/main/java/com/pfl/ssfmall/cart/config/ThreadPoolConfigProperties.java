@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Data
 public class ThreadPoolConfigProperties {
-    private Integer coreSize;
-    private Integer maxSize;
-    private Integer keepAliveTime;
+    private Integer coreSize = 20;
+    private Integer maxSize = 200;
+    private Integer keepAliveTime = 10;
 }

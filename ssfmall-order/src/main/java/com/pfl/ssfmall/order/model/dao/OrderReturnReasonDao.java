@@ -1,4 +1,4 @@
-package com.pfl.ssfmall.order.dao;
+package com.pfl.ssfmall.order.model.dao;
 
 import com.pfl.ssfmall.order.entity.OrderReturnReasonEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;

@@ -25,7 +25,7 @@ public class CartController {
     /**
      * 获取当前用户的购物车条目
      */
-    @GetMapping("cartItem")
+    @GetMapping("/cartItem")
     public List<CartItem> getCartItems() {
         return cartService.getUserCartItems();
     }

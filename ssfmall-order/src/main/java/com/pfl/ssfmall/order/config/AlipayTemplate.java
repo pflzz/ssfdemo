@@ -5,7 +5,7 @@ import com.alipay.api.AlipayClient;
 import com.alipay.api.DefaultAlipayClient;
 import com.alipay.api.request.AlipayTradePagePayRequest;
 
-import com.pfl.ssfmall.order.vo.PayVo;
+import com.pfl.ssfmall.order.model.vo.PayVo;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

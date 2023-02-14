@@ -8,7 +8,7 @@ import org.springframework.session.data.redis.config.annotation.web.http.EnableR
 
 @EnableRedisHttpSession
 @EnableRabbit
-@EnableFeignClients
+@EnableFeignClients(basePackages = "com.pfl.ssfmall.order.feign")
 @SpringBootApplication
 public class SsfmallOrderApplication {
 

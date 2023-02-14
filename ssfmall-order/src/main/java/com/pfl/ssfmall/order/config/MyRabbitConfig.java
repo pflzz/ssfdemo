@@ -1,9 +1,7 @@
 package com.pfl.ssfmall.order.config;
 
-import com.rabbitmq.client.AMQP;
-import com.rabbitmq.client.Channel;
-import com.rabbitmq.client.impl.AMQImpl;
-import com.rabbitmq.client.impl.ChannelN;
+
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
@@ -15,6 +13,7 @@ import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 
 @Configuration
+@Slf4j
 public class MyRabbitConfig {
 
     @Resource
@@ -38,7 +37,7 @@ public class MyRabbitConfig {
              */
             @Override
             public void confirm(CorrelationData correlationData, boolean b, String s) {
-                System.out.println("confirm....correlationData ====> [" + correlationData + "]" + "ack ===> [" + b + "]" +
+                log.info("confirm....关联数据(该消息的唯一 id) ====> [" + correlationData + "]" + "ack ===> [" + b + "]" +
                         "cause =====> " + s);
             }
         });

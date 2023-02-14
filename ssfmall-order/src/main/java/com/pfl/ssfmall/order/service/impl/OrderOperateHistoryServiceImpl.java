@@ -8,7 +8,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.pfl.common.utils.PageUtils;
 import com.pfl.common.utils.Query;
 
-import com.pfl.ssfmall.order.dao.OrderOperateHistoryDao;
+import com.pfl.ssfmall.order.model.dao.OrderOperateHistoryDao;
 import com.pfl.ssfmall.order.entity.OrderOperateHistoryEntity;
 import com.pfl.ssfmall.order.service.OrderOperateHistoryService;
 

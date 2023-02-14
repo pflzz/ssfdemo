@@ -1,4 +1,4 @@
-package com.pfl.ssfmall.order.vo;
+package com.pfl.ssfmall.order.model.vo;
 
 import com.pfl.ssfmall.order.entity.OrderEntity;
 import lombok.Data;

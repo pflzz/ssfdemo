@@ -1,20 +1,27 @@
 package com.pfl.ssfmall.order.service.impl;
 
 import com.pfl.common.to.MemberEntityVo;
+import com.pfl.common.utils.R;
 import com.pfl.ssfmall.order.config.LoginUserInterceptor;
 import com.pfl.ssfmall.order.constant.OrderConstant;
 import com.pfl.ssfmall.order.feign.CartFeignService;
 import com.pfl.ssfmall.order.feign.MemberFeignService;
-import com.pfl.ssfmall.order.vo.*;
+import com.pfl.ssfmall.order.feign.WareFeignService;
+import com.pfl.ssfmall.order.model.dto.OrderCreateTo;
+import com.pfl.ssfmall.order.model.dto.WareSkuLockedTo;
+import com.pfl.ssfmall.order.model.vo.*;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.script.DefaultRedisScript;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -22,7 +29,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.pfl.common.utils.PageUtils;
 import com.pfl.common.utils.Query;
 
-import com.pfl.ssfmall.order.dao.OrderDao;
+import com.pfl.ssfmall.order.model.dao.OrderDao;
 import com.pfl.ssfmall.order.entity.OrderEntity;
 import com.pfl.ssfmall.order.service.OrderService;
 
@@ -38,6 +45,12 @@ public class OrderServiceImpl extends ServiceImpl<OrderDao, OrderEntity> impleme
     private CartFeignService cartFeignService;
     @Resource
     private StringRedisTemplate stringRedisTemplate;
+    @Resource
+    private WareFeignService wareFeignService;
+    @Resource
+    private RabbitTemplate rabbitTemplate;
+
+    public static final ThreadLocal<OrderSubmitVo> confirmVoThreadLocal = new ThreadLocal<>();
 
 
     @Override
@@ -79,6 +92,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderDao, OrderEntity> impleme
 
     @Override
     public SubmitRespVo orderSubmit(OrderSubmitVo vo) {
+        confirmVoThreadLocal.set(vo);
         SubmitRespVo respVo = new SubmitRespVo();
         MemberEntityVo member = LoginUserInterceptor.threadLocal.get();
         String orderToken = vo.getOrderToken();
@@ -87,17 +101,68 @@ public class OrderServiceImpl extends ServiceImpl<OrderDao, OrderEntity> impleme
         Long result = stringRedisTemplate.execute(new DefaultRedisScript<Long>(script, Long.class), Arrays.asList(OrderConstant.USER_ORDER_TOKEN_PREFIX + member.getId()), orderToken);
         if (result == 1L) {
             // 验证成功
-            // 创建订单 ，验价， 锁库存
-
-
+            // 1. 创建订单，订单项信息
+            OrderCreateTo order = createOrder();
+            // 2. 应付总额
+            BigDecimal payAmount = order.getOrder().getPayAmount();
+            // 应付价格
+            BigDecimal payPrice = vo.getPayPrice();
+            if (Math.abs(payAmount.subtract(payPrice).doubleValue()) < 0.01) {
+                // 金额保存成功保存订单
+                saveOrder(order);
+                // 创建锁定库存Vo
+                WareSkuLockedTo wareSkuLockedVo = new WareSkuLockedTo();
+                // 准备好商品项
+                List<OrderItemVo> lock = order.getOrderItems().stream().map(orderItemEntity -> {
+                    OrderItemVo orderItemVo = new OrderItemVo();
+                    // 商品购买数量
+                    orderItemVo.setCount(orderItemEntity.getSkuQuantity());
+                    // skuid 用来查询商品信息
+                    orderItemVo.setSkuId(orderItemEntity.getSkuId());
+                    // 商品标题
+                    orderItemVo.setTitle(orderItemEntity.getSkuName());
+                    return orderItemVo;
+                }).collect(Collectors.toList());
+                // 订单号
+                wareSkuLockedVo.setOrderSn(order.getOrder().getOrderSn());
+                // 商品项
+                wareSkuLockedVo.setLocks(lock);
+                // 远程调用库存服务锁定库存
+                R r = wareFeignService.orderLockStock(wareSkuLockedVo);
+                if (r.getCode() == 0) { // 库存锁定成功
+                    // 将订单对象放到返回Vo中
+                    respVo.setOrder(order.getOrder());
+                    // 设置状态码
+                    respVo.setCode(0);
+                    // 订单创建成功发送消息给MQ
+                    rabbitTemplate.convertAndSend("order-event-exchange"
+                            ,"order.create.order"
+                            ,order.getOrder());
+                    return respVo;
+                } else {
+                    // 远程锁定库存失败
+                    respVo.setCode(3);
+                    return respVo;
+                }
+            } else {
+                // 商品价格比较失败
+                respVo.setCode(2);
+                return respVo;
+            }
         } else {
             // 验证失败
             respVo.setCode(1);
+            return respVo;
         }
-
-        return respVo;
     }
 
+    private void saveOrder(OrderCreateTo order) {
+
+    }
+
+    private OrderCreateTo createOrder() {
+        return null;
+    }
 
 
 }

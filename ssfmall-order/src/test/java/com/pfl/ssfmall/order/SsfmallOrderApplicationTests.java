@@ -1,14 +1,17 @@
 package com.pfl.ssfmall.order;
 
 
-import org.junit.Test;
+import lombok.extern.slf4j.Slf4j;
+
+import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
+
+@RunWith(SpringRunner.class)
 @SpringBootTest
-class SsfmallOrderApplicationTests {
+@Slf4j
+public class SsfmallOrderApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
 
 }

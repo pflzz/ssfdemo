@@ -1,6 +1,6 @@
-package com.pfl.ssfmall.order.vo;
+package com.pfl.ssfmall.order.model.vo;
 
-import lombok.Data;
+
 import lombok.Getter;
 import lombok.Setter;
 

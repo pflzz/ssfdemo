@@ -8,7 +8,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.pfl.common.utils.PageUtils;
 import com.pfl.common.utils.Query;
 
-import com.pfl.ssfmall.order.dao.OrderItemDao;
+import com.pfl.ssfmall.order.model.dao.OrderItemDao;
 import com.pfl.ssfmall.order.entity.OrderItemEntity;
 import com.pfl.ssfmall.order.service.OrderItemService;
 
@@ -25,5 +25,7 @@ public class OrderItemServiceImpl extends ServiceImpl<OrderItemDao, OrderItemEnt
 
         return new PageUtils(page);
     }
+
+
 
 }

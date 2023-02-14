@@ -1,6 +1,5 @@
-package com.pfl.ssfmall.order.vo;
+package com.pfl.ssfmall.order.model.vo;
 
-import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
 @Data

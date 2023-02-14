@@ -1,6 +1,6 @@
 package com.pfl.ssfmall.order.feign;
 
-import com.pfl.ssfmall.order.vo.MemberAddressVo;
+import com.pfl.ssfmall.order.model.vo.MemberAddressVo;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

@@ -4,9 +4,9 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://43.138.81.213:3306/ssfmall_oms?useSSL=false
+    url: jdbc:mysql://43.138.81.213:3306/gulimall_oms?useSSL=false
     username: root
-    password: root
+    password: 123456
   cloud:
     nacos:
       discovery:
@@ -18,3 +18,11 @@ mybatis-plus:
   global-config:
     db-config:
       id-type: auto
+order:
+  thread:
+    pool:
+      core-size: 20
+      max-size: 200
+      keep-alive-time: 10
+
+
