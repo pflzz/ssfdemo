@@ -4,7 +4,7 @@
 <mapper namespace="com.pfl.ssfmall.order.model.dao.OrderOperateHistoryDao">
 
 	<!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="com.pfl.ssfmall.order.entity.OrderOperateHistoryEntity" id="orderOperateHistoryMap">
+    <resultMap type="com.pfl.ssfmall.order.model.entity.OrderOperateHistoryEntity" id="orderOperateHistoryMap">
         <result property="id" column="id"/>
         <result property="orderId" column="order_id"/>
         <result property="operateMan" column="operate_man"/>

@@ -1,12 +1,12 @@
 package com.pfl.ssfmall.ware.service.impl;
 
 import com.pfl.common.constant.WareConstant;
-import com.pfl.ssfmall.ware.entity.PurchaseDetailEntity;
+import com.pfl.ssfmall.ware.model.entity.PurchaseDetailEntity;
 import com.pfl.ssfmall.ware.service.PurchaseDetailService;
 import com.pfl.ssfmall.ware.service.WareSkuService;
-import com.pfl.ssfmall.ware.vo.PurchaseDoneVo;
-import com.pfl.ssfmall.ware.vo.PurchaseItemDoneVo;
-import com.pfl.ssfmall.ware.vo.PurchaseMergeVo;
+import com.pfl.ssfmall.ware.model.vo.PurchaseDoneVo;
+import com.pfl.ssfmall.ware.model.vo.PurchaseItemDoneVo;
+import com.pfl.ssfmall.ware.model.vo.PurchaseMergeVo;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +23,7 @@ import com.pfl.common.utils.PageUtils;
 import com.pfl.common.utils.Query;
 
 import com.pfl.ssfmall.ware.dao.PurchaseDao;
-import com.pfl.ssfmall.ware.entity.PurchaseEntity;
+import com.pfl.ssfmall.ware.model.entity.PurchaseEntity;
 import com.pfl.ssfmall.ware.service.PurchaseService;
 import org.springframework.transaction.annotation.Transactional;
 

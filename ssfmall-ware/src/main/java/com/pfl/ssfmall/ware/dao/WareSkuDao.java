@@ -1,9 +1,11 @@
 package com.pfl.ssfmall.ware.dao;
 
-import com.pfl.ssfmall.ware.entity.WareSkuEntity;
+import com.pfl.ssfmall.ware.model.entity.WareSkuEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * 商品库存
@@ -29,4 +31,8 @@ public interface WareSkuDao extends BaseMapper<WareSkuEntity> {
      * @return
      */
     Long hasStock(Long skuId);
+
+    List<Long> wareHasStock(@Param("skuId") Long skuId, @Param("count") Integer count);
+
+    Long lockStock(@Param("skuId") Long skuId, @Param("wareId") Long wareId, @Param("count") Integer count);
 }

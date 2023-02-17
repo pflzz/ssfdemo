@@ -2,7 +2,7 @@ package com.pfl.ssfmall.order.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.pfl.common.utils.PageUtils;
-import com.pfl.ssfmall.order.entity.OrderReturnReasonEntity;
+import com.pfl.ssfmall.order.model.entity.OrderReturnReasonEntity;
 
 import java.util.Map;
 

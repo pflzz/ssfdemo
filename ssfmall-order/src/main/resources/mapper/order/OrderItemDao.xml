@@ -4,7 +4,7 @@
 <mapper namespace="com.pfl.ssfmall.order.model.dao.OrderItemDao">
 
 	<!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="com.pfl.ssfmall.order.entity.OrderItemEntity" id="orderItemMap">
+    <resultMap type="com.pfl.ssfmall.order.model.entity.OrderItemEntity" id="orderItemMap">
         <result property="id" column="id"/>
         <result property="orderId" column="order_id"/>
         <result property="orderSn" column="order_sn"/>

@@ -12,6 +12,7 @@
     <artifactId>ssfmall-secskill</artifactId>
 
     <dependencies>
+
         <dependency>
             <groupId>com.pfl.ssfmall</groupId>
             <artifactId>ssfmall-common</artifactId>

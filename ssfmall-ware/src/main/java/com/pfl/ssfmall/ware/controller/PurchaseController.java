@@ -4,13 +4,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-import com.pfl.ssfmall.ware.vo.PurchaseDoneVo;
-import com.pfl.ssfmall.ware.vo.PurchaseMergeVo;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
+import com.pfl.ssfmall.ware.model.vo.PurchaseDoneVo;
+import com.pfl.ssfmall.ware.model.vo.PurchaseMergeVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import com.pfl.ssfmall.ware.entity.PurchaseEntity;
+import com.pfl.ssfmall.ware.model.entity.PurchaseEntity;
 import com.pfl.ssfmall.ware.service.PurchaseService;
 import com.pfl.common.utils.PageUtils;
 import com.pfl.common.utils.R;

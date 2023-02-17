@@ -9,7 +9,7 @@ import com.pfl.common.utils.PageUtils;
 import com.pfl.common.utils.Query;
 
 import com.pfl.ssfmall.ware.dao.WareOrderTaskDetailDao;
-import com.pfl.ssfmall.ware.entity.WareOrderTaskDetailEntity;
+import com.pfl.ssfmall.ware.model.entity.WareOrderTaskDetailEntity;
 import com.pfl.ssfmall.ware.service.WareOrderTaskDetailService;
 
 

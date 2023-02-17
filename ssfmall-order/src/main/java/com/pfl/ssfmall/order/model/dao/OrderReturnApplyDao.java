@@ -1,6 +1,6 @@
 package com.pfl.ssfmall.order.model.dao;
 
-import com.pfl.ssfmall.order.entity.OrderReturnApplyEntity;
+import com.pfl.ssfmall.order.model.entity.OrderReturnApplyEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 

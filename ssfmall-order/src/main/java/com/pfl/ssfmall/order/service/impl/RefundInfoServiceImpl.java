@@ -9,7 +9,7 @@ import com.pfl.common.utils.PageUtils;
 import com.pfl.common.utils.Query;
 
 import com.pfl.ssfmall.order.model.dao.RefundInfoDao;
-import com.pfl.ssfmall.order.entity.RefundInfoEntity;
+import com.pfl.ssfmall.order.model.entity.RefundInfoEntity;
 import com.pfl.ssfmall.order.service.RefundInfoService;
 
 

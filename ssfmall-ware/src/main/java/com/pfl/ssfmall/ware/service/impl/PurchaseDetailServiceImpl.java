@@ -1,6 +1,5 @@
 package com.pfl.ssfmall.ware.service.impl;
 
-import com.pfl.ssfmall.ware.entity.PurchaseEntity;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +12,7 @@ import com.pfl.common.utils.PageUtils;
 import com.pfl.common.utils.Query;
 
 import com.pfl.ssfmall.ware.dao.PurchaseDetailDao;
-import com.pfl.ssfmall.ware.entity.PurchaseDetailEntity;
+import com.pfl.ssfmall.ware.model.entity.PurchaseDetailEntity;
 import com.pfl.ssfmall.ware.service.PurchaseDetailService;
 
 

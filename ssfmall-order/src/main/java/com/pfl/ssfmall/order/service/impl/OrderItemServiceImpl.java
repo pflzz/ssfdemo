@@ -9,7 +9,7 @@ import com.pfl.common.utils.PageUtils;
 import com.pfl.common.utils.Query;
 
 import com.pfl.ssfmall.order.model.dao.OrderItemDao;
-import com.pfl.ssfmall.order.entity.OrderItemEntity;
+import com.pfl.ssfmall.order.model.entity.OrderItemEntity;
 import com.pfl.ssfmall.order.service.OrderItemService;
 
 

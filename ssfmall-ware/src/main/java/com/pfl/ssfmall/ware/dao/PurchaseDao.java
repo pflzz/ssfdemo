@@ -1,6 +1,6 @@
 package com.pfl.ssfmall.ware.dao;
 
-import com.pfl.ssfmall.ware.entity.PurchaseEntity;
+import com.pfl.ssfmall.ware.model.entity.PurchaseEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 

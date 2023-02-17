@@ -1,4 +1,4 @@
-package com.pfl.ssfmall.order.entity;
+package com.pfl.ssfmall.order.model.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;

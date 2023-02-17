@@ -4,12 +4,14 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-import com.pfl.ssfmall.ware.vo.SkuStockVo;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
+import com.pfl.common.exception.BizCodeEnum;
+import com.pfl.ssfmall.ware.exception.NoStockException;
+import com.pfl.ssfmall.ware.model.dto.WareSkuLockedTo;
+import com.pfl.ssfmall.ware.model.vo.SkuStockVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import com.pfl.ssfmall.ware.entity.WareSkuEntity;
+import com.pfl.ssfmall.ware.model.entity.WareSkuEntity;
 import com.pfl.ssfmall.ware.service.WareSkuService;
 import com.pfl.common.utils.PageUtils;
 import com.pfl.common.utils.R;
@@ -28,6 +30,19 @@ import com.pfl.common.utils.R;
 public class WareSkuController {
     @Autowired
     private WareSkuService wareSkuService;
+
+    @PostMapping("/orderLockStock")
+    public R orderLockStock(@RequestBody WareSkuLockedTo wareSkuLockedTo) {
+        try {
+            Boolean res = wareSkuService.lockStock(wareSkuLockedTo);
+            return R.ok();
+        } catch (NoStockException e) {
+            return R.error(BizCodeEnum.WARE_NOSTOCK_EXCEPTION.getCode(), BizCodeEnum.WARE_NOSTOCK_EXCEPTION.getMessage());
+        }
+
+
+    }
+
 
     /**
      * 检索该商品是否有库存

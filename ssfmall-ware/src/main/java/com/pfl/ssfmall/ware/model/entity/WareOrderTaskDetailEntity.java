@@ -1,10 +1,10 @@
-package com.pfl.ssfmall.ware.entity;
+package com.pfl.ssfmall.ware.model.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.io.Serializable;
-import java.util.Date;
+
 import lombok.Data;
 
 /**

@@ -4,7 +4,7 @@
 <mapper namespace="com.pfl.ssfmall.ware.dao.UndoLogDao">
 
 	<!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="com.pfl.ssfmall.ware.entity.UndoLogEntity" id="undoLogMap">
+    <resultMap type="com.pfl.ssfmall.ware.model.entity.UndoLogEntity" id="undoLogMap">
         <result property="id" column="id"/>
         <result property="branchId" column="branch_id"/>
         <result property="xid" column="xid"/>

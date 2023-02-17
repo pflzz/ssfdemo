@@ -2,7 +2,7 @@ package com.pfl.ssfmall.ware.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.pfl.common.utils.PageUtils;
-import com.pfl.ssfmall.ware.entity.PurchaseDetailEntity;
+import com.pfl.ssfmall.ware.model.entity.PurchaseDetailEntity;
 
 import java.util.List;
 import java.util.Map;

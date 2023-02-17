@@ -1,22 +1,22 @@
-package com.pfl.ssfmall.order.entity;
+package com.pfl.ssfmall.ware.model.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.io.Serializable;
-import java.util.Date;
+
 import lombok.Data;
 
 /**
- * 退货原因
+ * 仓库信息
  * 
  * @author ssf
  * @email ${email}
- * @date 2022-06-02 11:11:58
+ * @date 2022-06-02 11:22:38
  */
 @Data
-@TableName("oms_order_return_reason")
-public class OrderReturnReasonEntity implements Serializable {
+@TableName("wms_ware_info")
+public class WareInfoEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -25,20 +25,16 @@ public class OrderReturnReasonEntity implements Serializable {
 	@TableId
 	private Long id;
 	/**
-	 * 退货原因名
+	 * 仓库名
 	 */
 	private String name;
 	/**
-	 * 排序
+	 * 仓库地址
 	 */
-	private Integer sort;
+	private String address;
 	/**
-	 * 启用状态
+	 * 区域编码
 	 */
-	private Integer status;
-	/**
-	 * create_time
-	 */
-	private Date createTime;
+	private String areacode;
 
 }

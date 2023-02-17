@@ -1,4 +1,4 @@
-package com.pfl.ssfmall.ware.entity;
+package com.pfl.ssfmall.ware.model.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -8,41 +8,53 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * 商品库存
+ * 
  * 
  * @author ssf
  * @email ${email}
  * @date 2022-06-02 11:22:38
  */
 @Data
-@TableName("wms_ware_sku")
-public class WareSkuEntity implements Serializable {
+@TableName("undo_log")
+public class UndoLogEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * id
+	 * 
 	 */
 	@TableId
 	private Long id;
 	/**
-	 * sku_id
+	 * 
 	 */
-	private Long skuId;
+	private Long branchId;
 	/**
-	 * 仓库id
+	 * 
 	 */
-	private Long wareId;
+	private String xid;
 	/**
-	 * 库存数
+	 * 
 	 */
-	private Integer stock;
+	private String context;
 	/**
-	 * sku_name
+	 * 
 	 */
-	private String skuName;
+	private byte[] rollbackInfo;
 	/**
-	 * 锁定库存
+	 * 
 	 */
-	private Integer stockLocked;
+	private Integer logStatus;
+	/**
+	 * 
+	 */
+	private Date logCreated;
+	/**
+	 * 
+	 */
+	private Date logModified;
+	/**
+	 * 
+	 */
+	private String ext;
 
 }

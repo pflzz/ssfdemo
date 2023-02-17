@@ -1,22 +1,22 @@
-package com.pfl.ssfmall.ware.entity;
+package com.pfl.ssfmall.ware.model.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.io.Serializable;
-import java.util.Date;
+
 import lombok.Data;
 
 /**
- * 仓库信息
+ * 商品库存
  * 
  * @author ssf
  * @email ${email}
  * @date 2022-06-02 11:22:38
  */
 @Data
-@TableName("wms_ware_info")
-public class WareInfoEntity implements Serializable {
+@TableName("wms_ware_sku")
+public class WareSkuEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -25,16 +25,24 @@ public class WareInfoEntity implements Serializable {
 	@TableId
 	private Long id;
 	/**
-	 * 仓库名
+	 * sku_id
 	 */
-	private String name;
+	private Long skuId;
 	/**
-	 * 仓库地址
+	 * 仓库id
 	 */
-	private String address;
+	private Long wareId;
 	/**
-	 * 区域编码
+	 * 库存数
 	 */
-	private String areacode;
+	private Integer stock;
+	/**
+	 * sku_name
+	 */
+	private String skuName;
+	/**
+	 * 锁定库存
+	 */
+	private Integer stockLocked;
 
 }

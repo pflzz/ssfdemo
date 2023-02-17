@@ -9,7 +9,7 @@ import com.pfl.common.utils.PageUtils;
 import com.pfl.common.utils.Query;
 
 import com.pfl.ssfmall.order.model.dao.PaymentInfoDao;
-import com.pfl.ssfmall.order.entity.PaymentInfoEntity;
+import com.pfl.ssfmall.order.model.entity.PaymentInfoEntity;
 import com.pfl.ssfmall.order.service.PaymentInfoService;
 
 

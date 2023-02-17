@@ -22,5 +22,19 @@
       <jdbc-url>jdbc:mysql://43.138.81.213:3306/gulimall_wms</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="gulimall_pms@43.138.81.213" uuid="1803a32f-4c24-4517-bb9f-e12322528d1d">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://43.138.81.213:3306/gulimall_pms</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="gulimall_oms@43.138.81.213" uuid="c05f722e-783d-4e82-8d17-add5b6f51bf7">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://43.138.81.213:3306/gulimall_oms</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

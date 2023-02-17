@@ -1,7 +1,7 @@
 package com.pfl.ssfmall.order.model.dto;
 
-import com.pfl.ssfmall.order.entity.OrderEntity;
-import com.pfl.ssfmall.order.entity.OrderItemEntity;
+import com.pfl.ssfmall.order.model.entity.OrderEntity;
+import com.pfl.ssfmall.order.model.entity.OrderItemEntity;
 import lombok.Data;
 
 import java.math.BigDecimal;

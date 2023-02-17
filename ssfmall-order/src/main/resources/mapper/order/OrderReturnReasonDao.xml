@@ -4,7 +4,7 @@
 <mapper namespace="com.pfl.ssfmall.order.model.dao.OrderReturnReasonDao">
 
 	<!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="com.pfl.ssfmall.order.entity.OrderReturnReasonEntity" id="orderReturnReasonMap">
+    <resultMap type="com.pfl.ssfmall.order.model.entity.OrderReturnReasonEntity" id="orderReturnReasonMap">
         <result property="id" column="id"/>
         <result property="name" column="name"/>
         <result property="sort" column="sort"/>

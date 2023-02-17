@@ -2,8 +2,9 @@ package com.pfl.ssfmall.ware.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.pfl.common.utils.PageUtils;
-import com.pfl.ssfmall.ware.entity.WareSkuEntity;
-import com.pfl.ssfmall.ware.vo.SkuStockVo;
+import com.pfl.ssfmall.ware.model.dto.WareSkuLockedTo;
+import com.pfl.ssfmall.ware.model.entity.WareSkuEntity;
+import com.pfl.ssfmall.ware.model.vo.SkuStockVo;
 
 import java.util.List;
 import java.util.Map;
@@ -31,5 +32,7 @@ public interface WareSkuService extends IService<WareSkuEntity> {
      * 检索该商品是否有库存
      */
     List<SkuStockVo> hasStock(List<Long> skuIds);
+
+    Boolean lockStock(WareSkuLockedTo wareSkuLockedTo);
 }
 

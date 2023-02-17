@@ -1,4 +1,4 @@
-package com.pfl.ssfmall.ware.vo;
+package com.pfl.ssfmall.ware.model.vo;
 
 import lombok.Data;
 

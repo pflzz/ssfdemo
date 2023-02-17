@@ -10,7 +10,7 @@ import com.pfl.common.utils.PageUtils;
 import com.pfl.common.utils.Query;
 
 import com.pfl.ssfmall.ware.dao.WareInfoDao;
-import com.pfl.ssfmall.ware.entity.WareInfoEntity;
+import com.pfl.ssfmall.ware.model.entity.WareInfoEntity;
 import com.pfl.ssfmall.ware.service.WareInfoService;
 
 

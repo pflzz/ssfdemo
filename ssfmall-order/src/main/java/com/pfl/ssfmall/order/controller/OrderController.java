@@ -10,7 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import com.pfl.ssfmall.order.entity.OrderEntity;
+import com.pfl.ssfmall.order.model.entity.OrderEntity;
 import com.pfl.ssfmall.order.service.OrderService;
 import com.pfl.common.utils.PageUtils;
 import com.pfl.common.utils.R;

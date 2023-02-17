@@ -2,9 +2,9 @@ package com.pfl.ssfmall.ware.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.pfl.common.utils.PageUtils;
-import com.pfl.ssfmall.ware.entity.PurchaseEntity;
-import com.pfl.ssfmall.ware.vo.PurchaseDoneVo;
-import com.pfl.ssfmall.ware.vo.PurchaseMergeVo;
+import com.pfl.ssfmall.ware.model.entity.PurchaseEntity;
+import com.pfl.ssfmall.ware.model.vo.PurchaseDoneVo;
+import com.pfl.ssfmall.ware.model.vo.PurchaseMergeVo;
 
 import java.util.List;
 import java.util.Map;

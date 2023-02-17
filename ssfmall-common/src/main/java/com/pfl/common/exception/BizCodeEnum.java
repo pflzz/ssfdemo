@@ -11,7 +11,8 @@ public enum BizCodeEnum {
     USER_EXIST_EXCEPTION(15001, "该用户名已被注册"),
     PHONE_EXIST_EXCEPTION(15002, "该手机号已被注册"),
     ACCOUNT_PASSWORD_VALID_EXCEPTION(15003, "账号密码错误"),
-    WEIBO_AUTH_EXCEPTION(15004, "微博授权失败");
+    WEIBO_AUTH_EXCEPTION(15004, "微博授权失败"),
+    WARE_NOSTOCK_EXCEPTION(21001, "库存不足");
 
 
     private Integer code;

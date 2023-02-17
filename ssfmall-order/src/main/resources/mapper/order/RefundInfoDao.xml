@@ -4,7 +4,7 @@
 <mapper namespace="com.pfl.ssfmall.order.model.dao.RefundInfoDao">
 
 	<!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="com.pfl.ssfmall.order.entity.RefundInfoEntity" id="refundInfoMap">
+    <resultMap type="com.pfl.ssfmall.order.model.entity.RefundInfoEntity" id="refundInfoMap">
         <result property="id" column="id"/>
         <result property="orderReturnId" column="order_return_id"/>
         <result property="refund" column="refund"/>

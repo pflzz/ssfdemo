@@ -4,7 +4,7 @@
 <mapper namespace="com.pfl.ssfmall.ware.dao.WareOrderTaskDao">
 
 	<!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="com.pfl.ssfmall.ware.entity.WareOrderTaskEntity" id="wareOrderTaskMap">
+    <resultMap type="com.pfl.ssfmall.ware.model.entity.WareOrderTaskEntity" id="wareOrderTaskMap">
         <result property="id" column="id"/>
         <result property="orderId" column="order_id"/>
         <result property="orderSn" column="order_sn"/>
